@@ -38,12 +38,7 @@ describe('Smallwins Slack', () => {
       done()
     })
     it("should add a resource when it's added", (done) => {
-      var stub = getSlackClientStub()
-      var slack = {
-        'rtm': {
-          client: stub
-        }
-      }
+      var slack = getSlackClientStub()
       var bbSmallwins = new BeepBoopSmallwins(slack, {}, resourcer)
       var workers = bbSmallwins.start()
       resourcer.emit('add_resource', getAddResource())
@@ -64,12 +59,7 @@ describe('Smallwins Slack', () => {
       done()
     })
     it('should remove resource', (done) => {
-      var stub = getSlackClientStub()
-      var slack = {
-        'rtm': {
-          client: stub
-        }
-      }
+      var slack = getSlackClientStub()
       var bbSmallwins = new BeepBoopSmallwins(slack, {}, resourcer)
       var workers = bbSmallwins.start()
       resourcer.emit('add_resource', getAddResource())
@@ -128,14 +118,18 @@ function getUpdateResource () {
   }
 }
 function getSlackClientStub () {
-  return function () {
-    return {
-      'tokens': {},
-      started: (payload) => {
-        return payload({'team': {'id': 'someteam'}})
-      },
-      close: sinon.spy(),
-      listen: sinon.spy()
+  return {
+    'rtm': {
+      client: function () {
+        return {
+          'tokens': {},
+          started: (payload) => {
+            return payload({'team': {'id': 'someteam'}})
+          },
+          close: sinon.spy(),
+          listen: sinon.spy()
+        }
+      }
     }
   }
 }
