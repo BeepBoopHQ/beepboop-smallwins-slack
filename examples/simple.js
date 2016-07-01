@@ -39,6 +39,6 @@ workers.on('start', (bot) => {
 })
 // after teams have been removed
 workers.on('stop', function (bot) {
-  // this is an instance of a botkit worker
+  // this is an instance of a smallwins rtm client
   console.log('closed bot' + bot)
 })
