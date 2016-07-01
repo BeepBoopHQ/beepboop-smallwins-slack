@@ -26,7 +26,8 @@
   "license": "MIT",
   "dependencies": {
     "beepboop": "^1.1.0",
-    "deap": "^1.0.0"
+    "deap": "^1.0.0",
+    "eventemitter2": "^1.0.5"
   },
   "devDependencies": {
     "standard": "^6.0.8",
