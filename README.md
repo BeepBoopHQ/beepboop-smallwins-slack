@@ -7,7 +7,7 @@
 Supporting multiple teams from a single bot process is made simpler as `beepboop-smallwins-slack` handles creating new RTM connections as new teams add your bot.
 
 ## Install
-`npm install --save beepboop-botkit`
+`npm install --save beepboop-smallwins-slack`
 
 ## Use
 
@@ -30,7 +30,7 @@ workers.on('start', (bot) => {
 
 see [examples/simple.js](https://github.com/BeepBoopHQ/beepboop-smallwins-slack/blob/master/examples/simple.js) for an example.
 
-## Module: beepboop-botkit
+## Module: beepboop-smallwins-slack
 
 Module has exported function `start`
 
