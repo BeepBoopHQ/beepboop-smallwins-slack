@@ -16,7 +16,7 @@ describe('Smallwins Slack', () => {
   before(() => { clock = sinon.useFakeTimers() })
   after(() => { clock.restore() })
   beforeEach(() => {
-    resourcer = BeepBoop.start({logger: console})
+    resourcer = BeepBoop.start({logger: console, serverURL: 'http://localhost'})
     socket = new events.EventEmitter()
     socket.send = function () {}
     sinon.stub(resourcer, 'newWebSocket').returns(socket)
