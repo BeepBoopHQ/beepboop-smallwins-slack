@@ -1,0 +1,38 @@
+{
+  "name": "beepboop-smallwins-slack",
+  "version": "1.0.0",
+  "description": "Run a smallwins-slack bot on BeepBoopHQ",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && mocha test"
+  },
+  "homepage": "http://beepboophq.com",
+  "bugs": {
+    "url": "https://github.com/BeepBoopHQ/beepboop-smallwins-slack/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BeepBoopHQ/beepboop-smallwins-slack"
+  },
+  "keywords": [
+    "slack",
+    "smallwins-slack",
+    "beepboop",
+    "beep",
+    "boop",
+    "bot"
+  ],
+  "author": "Curtis Allen <curtis.allen@robotsandpencils.com> (https://beepboophq.com)",
+  "license": "MIT",
+  "dependencies": {
+    "beepboop": "^1.1.0",
+    "deap": "^1.0.0",
+    "eventemitter2": "^1.0.5"
+  },
+  "devDependencies": {
+    "standard": "^6.0.8",
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0",
+    "sinon": "^1.17.3"
+  }
+}
