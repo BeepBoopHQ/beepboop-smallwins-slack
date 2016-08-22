@@ -25,6 +25,7 @@
   "author": "Curtis Allen <curtis.allen@robotsandpencils.com> (https://beepboophq.com)",
   "license": "MIT",
   "dependencies": {
+    "back": "^1.0.1",
     "beepboop": "^1.1.0",
     "deap": "^1.0.0",
     "eventemitter2": "^1.0.5"
